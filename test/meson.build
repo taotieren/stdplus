@@ -89,7 +89,7 @@ endif
 
 add_test_setup(
     'stdplus',
-    exe_wrapper: run_with_tmp,
+    exe_wrapper: [run_with_tmp, 'valgrind'],
     env: {'TMPTMPL': 'stdplus-test.XXXXXXXXXX'},
     is_default: true,
 )
